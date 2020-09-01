@@ -1,0 +1,49 @@
+.navbar {
+  height: 5vh;
+  background: rgb(121, 9, 114);
+  background: linear-gradient(
+    90deg,
+    rgba(121, 9, 114, 1) 24%,
+    rgba(87, 0, 255, 1) 100%
+  );
+}
+.welcome {
+  text-align: center;
+  font-size: larger;
+}
+
+.product-page {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.left {
+  width: 50%;
+  align-content: center;
+  text-align: center;
+}
+
+.right {
+  width: 50%;
+}
+
+.right img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.tag {
+  padding: 1vh;
+  width: 25%;
+  border-radius: 2rem;
+  background: black;
+  color: white;
+  display: inline-block;
+}

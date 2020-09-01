@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My first Vue</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="navbar"></div>
+      <div class="welcome">
+        <h3>Hello vue</h3>
+        <div class="shop-cart">Products in your cart: {{cart}}</div>
+      </div>
+      <div class="product-page">
+        <div class="left">
+          <h3>{{title}}</h3>
+          <p>{{descr}}</p>
+          <p v-if="inStock > 10">Available!</p>
+          <p v-else-if="10 >= inStock && inStock > 0">Almost sold out!</p>
+          <p v-else="inStock===0">Sorry, Sold out!</p>
+          <p v-show="onSale">Currently on SALE!</p>
+
+          <ul>
+            <li class="tag" v-for="tag in tags" :key="tag">{{tag}}</li>
+          </ul>
+
+          <button @click="addToCart">Add to cart</button>
+        </div>
+        <div class="right">
+          <img :src="showImage(image)" @mouseover="changeImage" />
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="main.js"></script>
+  </body>
+</html>
