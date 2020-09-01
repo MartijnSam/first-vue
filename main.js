@@ -1,3 +1,4 @@
+Vue.component("v-icon", VueAwesome);
 var app = new Vue({
   el: "#app",
 

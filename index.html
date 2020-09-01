@@ -11,7 +11,9 @@
       <div class="navbar"></div>
       <div class="welcome">
         <h3>Hello vue</h3>
-        <div class="shop-cart">Products in your cart: {{cart}}</div>
+        <div class="shop-cart">
+          <v-icon name="shopping-cart"></v-icon> Products in your cart: {{cart}}
+        </div>
       </div>
       <div class="product-page">
         <div class="left">
@@ -26,7 +28,9 @@
             <li class="tag" v-for="tag in tags" :key="tag">{{tag}}</li>
           </ul>
 
-          <button @click="addToCart">Add to cart</button>
+          <button @click="addToCart">
+            <v-icon name="cart-plus"></v-icon>Add to cart
+          </button>
         </div>
         <div class="right">
           <img :src="showImage(image)" @mouseover="changeImage" />
@@ -34,7 +38,7 @@
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
+    <script src="vue-awesome.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
